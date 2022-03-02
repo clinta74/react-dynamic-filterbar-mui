@@ -1,0 +1,55 @@
+{
+    "name": "react-dynamic-filterbar-mui",
+    "version": "1.0.0",
+    "description": "A filter bar to host dynamic filters using React with MUI styles.",
+    "main": "lib/index.js",
+    "peerDependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.179",
+        "@types/node": "^17.0.21",
+        "@types/react": "^17.0.39",
+        "@types/react-dom": "^17.0.12",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "typescript": "^4.6.2"
+    },
+    "watch": {
+        "build:js": "src/{*.tsx, *.ts}",
+        "build:css": "src/{*.scss, *.ts}"
+    },
+    "scripts": {
+        "prepare": "npm run clean && npm run build",
+        "start": "npx parcel example/src/index.html --out-dir example/dist --open",
+        "build": "npm run build:js",
+        "build:js": "npx tsc",
+        "clean": "rm -Rf ./lib",
+        "watch": "npx npm-watch",
+        "build:docs": "rm -Rf ./docs && parcel build example/src/index.html --out-dir ./docs --public-url ./"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/clinta74/react-dynamic-filterbar-mui.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/clinta74/react-dynamic-filterbar-mui/issues"
+    },
+    "homepage": "https://github.com/clinta74/react-dynamic-filterbar-mui#readme",
+    "files": [
+        "lib",
+        "src"
+    ],
+    "dependencies": {
+        "@emotion/react": "^11.8.1",
+        "@emotion/styled": "^11.8.1",
+        "@mui/icons-material": "^5.4.4",
+        "@mui/material": "^5.4.4",
+        "filter-query-language-core": "^1.4.1",
+        "lodash": "^4.17.21",
+        "parcel": "^2.3.2"
+    }
+}
